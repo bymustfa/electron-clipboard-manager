@@ -1,0 +1,54 @@
+
+select {
+  border: none;
+  background: $buttonBackground;
+  color: $white;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $white;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $buttonBackgroundHover;
+  }
+
+  &:active, &:focus {
+    background-color: $buttonBackgroundClick;
+  }
+
+  /* Style selected option */
+  option {
+    background-color: $buttonBackground;
+    color: $white;
+
+    &:hover {
+      background-color: $buttonBackgroundHover;
+    }
+
+    &:active, &:focus {
+      background-color: $buttonBackgroundClick;
+    }
+  }
+}

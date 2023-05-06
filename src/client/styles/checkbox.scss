@@ -1,0 +1,77 @@
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.toggle input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $buttonBackground;
+  transition: background-color 0.4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: $white;
+  transition: transform 0.4s;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + .slider {
+  background-color: $toogleActive;
+}
+
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+input[type="checkbox"]:not(:checked) + .slider {
+  background-color: $buttonBackground;
+}
+
+
+
+/* Add animation effect */
+.slider:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-color: rgba($white, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border-radius: 10px;
+}
+
+

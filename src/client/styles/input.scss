@@ -1,0 +1,12 @@
+input[type="text"], input[type="number"] {
+  border: none;
+  background: $buttonBackground;
+  color: $white;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+
+  &:focus {
+    outline: none;
+  }
+}

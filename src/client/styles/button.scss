@@ -1,0 +1,19 @@
+
+button {
+  border: none;
+  border-radius: 6px;
+  background: $buttonBackground;
+  color: $white;
+  padding: 6px 14px;
+  font-size: 12px;
+  transition: all 120ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $buttonBackgroundHover;
+  }
+
+  &:active {
+    background: $buttonBackgroundClick;
+  }
+}
